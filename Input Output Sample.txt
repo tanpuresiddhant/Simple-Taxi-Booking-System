@@ -1,0 +1,45 @@
+tanpuresiddhant@DESKTOP-T6QDAQR:~$ curl -i -X PUT -H "Content-Type:application/json" http://localhost:8080/api/reset
+HTTP/1.1 200
+Content-Length: 0
+Date: Fri, 27 Apr 2018 00:26:07 GMT
+
+tanpuresiddhant@DESKTOP-T6QDAQR:~$ curl -i -X PUT -H "Content-Type:application/json" http://localhost:8080/api/book/ -d '{ "source" :{ "x" :-3, "y" :-5}, "destination": { "x":-3, "y":-6} }'
+HTTP/1.1 200
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 26
+Date: Fri, 27 Apr 2018 00:26:20 GMT
+
+{car_id: 1, total_time: 9}tanpuresiddhant@DESKTOP-T6QDAQR:~$
+tanpuresiddhant@DESKTOP-T6QDAQR:~$ curl -i -X PUT -H "Content-Type:application/json" http://localhost:8080/api/book/ -d '{ "source" :{ "x" :-3, "y" :-5}, "destination": { "x":-3, "y":-6} }'
+HTTP/1.1 200
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 26
+Date: Fri, 27 Apr 2018 00:26:27 GMT
+
+{car_id: 2, total_time: 9}tanpuresiddhant@DESKTOP-T6QDAQR:~$ curl -i -X PUT -H "Content-Type:application/json" http://localhost:8080/api/book/ -d '{ "source" :{ "x" :-3, "y" :-5}, "destination": { "x":-3, "y":-6} }'
+HTTP/1.1 200
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 26
+Date: Fri, 27 Apr 2018 00:26:30 GMT
+
+{car_id: 3, total_time: 9}tanpuresiddhant@DESKTOP-T6QDAQR:~$ curl -i -X PUT -H "Content-Type:application/json" http://localhost:8080/api/book/ -d '{ "source" :{ "x" :-3, "y" :-5}, "destination": { "x":-3, "y":-6} }'
+HTTP/1.1 200
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 0
+Date: Fri, 27 Apr 2018 00:26:39 GMT
+
+tanpuresiddhant@DESKTOP-T6QDAQR:~$ curl http://localhost:8080/api/check
+Taxi:{id:1, taxiLocation:{x:0,y: 0} , cutomerLocation: {x:-3,y: -5}, destinationLocation: { x:-3 , y:-6}, booked:true, bookedTime:9}Taxi:{id:2, taxiLocation:{x:0,y: 0} , cutomerLocation: {x:-3,y: -5}, destinationLocation: { x:-3 , y:-6}, booked:true, bookedTime:9}Taxi:{id:3, taxiLocation:{x:0,y: 0} , cutomerLocation: {x:-3,y: -5}, destinationLocation: { x:-3 , y:-6}, booked:true, bookedTime:9}tanpuresiddhant@DESKTOP-T6QDAQR:~$
+tanpuresiddhant@DESKTOP-T6QDAQR:~$ curl -i -X PUT -H "Content-Type:application/json" http://localhost:8080/api/tick
+HTTP/1.1 200
+Content-Length: 0
+Date: Fri, 27 Apr 2018 00:27:13 GMT
+
+tanpuresiddhant@DESKTOP-T6QDAQR:~$ curl http://localhost:8080/api/check
+Taxi:{id:1, taxiLocation:{x:0,y: 0} , cutomerLocation: {x:-3,y: -5}, destinationLocation: { x:-3 , y:-6}, booked:true, bookedTime:8}Taxi:{id:2, taxiLocation:{x:0,y: 0} , cutomerLocation: {x:-3,y: -5}, destinationLocation: { x:-3 , y:-6}, booked:true, bookedTime:8}Taxi:{id:3, taxiLocation:{x:0,y: 0} , cutomerLocation: {x:-3,y: -5}, destinationLocation: { x:-3 , y:-6}, booked:true, bookedTime:8}tanpuresiddhant@DESKTOP-T6QDAQR:~$ curl -i -X PUT -H "Content-Type:application/json" http://localhost:8080/api/tick
+HTTP/1.1 200
+Content-Length: 0
+Date: Fri, 27 Apr 2018 00:27:22 GMT
+
+tanpuresiddhant@DESKTOP-T6QDAQR:~$ curl http://localhost:8080/api/check
+Taxi:{id:1, taxiLocation:{x:0,y: 0} , cutomerLocation: {x:-3,y: -5}, destinationLocation: { x:-3 , y:-6}, booked:true, bookedTime:7}Taxi:{id:2, taxiLocation:{x:0,y: 0} , cutomerLocation: {x:-3,y: -5}, destinationLocation: { x:-3 , y:-6}, booked:true, bookedTime:7}Taxi:{id:3, taxiLocation:{x:0,y: 0} , cutomerLocation: {x:-3,y: -5}, destinationLocation: { x:-3 , y:-6}, booked:true, bookedTime:7}tanpuresiddhant@DESKTOP-T6QDAQR:~$

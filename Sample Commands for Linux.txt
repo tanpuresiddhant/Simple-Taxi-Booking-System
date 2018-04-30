@@ -1,0 +1,11 @@
+1) Reset api:-
+curl -i -X PUT -H "Content-Type:application/json" http://localhost:8080/api/reset
+
+2) Book api:-
+curl -i -X PUT -H "Content-Type:application/json" http://localhost:8080/api/book/ -d '{ "source" :{ "x" :-3, "y" :-5}, "destination": { "x":-3, "y":-6} }'
+
+3) Check api:-
+curl http://localhost:8080/api/check
+
+4) Tick api
+curl -i -X PUT -H "Content-Type:application/json" http://localhost:8080/api/tick
